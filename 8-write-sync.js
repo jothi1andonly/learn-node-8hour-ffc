@@ -1,0 +1,7 @@
+const fs = require('fs')
+console.log("starting sync")
+const first = fs.readFileSync('./content/sub-folder/first file','utf8')
+const second = fs.readFileSync('./content/sub-folder/second file','utf8')
+fs.writeFileSync('./content/sync-content',`${first}, ${second}`,{flag:'a'})
+console.log("ended writing")
+console.log("done with this task")
